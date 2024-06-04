@@ -1,0 +1,52 @@
+# Period definitions
+#training_start: "2012-12-25"
+#validation_periods: ["2013-04-01","2013-05-01","2013-06-01","2013-07-01", "2013-08-01", "2013-09-01"]
+#prediction_periods: ["2013-09-01", "2014-02-27"]
+
+training_start: "2009-09-01"
+validation_periods: ["2010-02-01", "2010-03-01", "2010-04-01","2010-05-01","2010-06-01","2010-07-01"]
+prediction_periods: ["2010-07-01", "2010-12-31"]
+
+# Dataset ("london" or "irish"):
+dataset: "irish"
+
+# Standard parameters (all methods)
+quantile_start: 0.01
+quantile_end: 1
+quantile_step: 0.01
+
+normalization_method: "min_max"
+evaluation_method: "CRPS"
+
+hyperparameter_scan: True
+model_hyperparameter_scan: ["random_forest"]
+
+# GeneralParameters global method
+algorithm_sample_selector: "knn"
+
+# HyperParameters global method
+historical_days: [7, 10, 14]
+nb_neighbors: [10, 100, 200, 500]
+global_prediction_method: ["next_day"]
+
+# HyperParameters historical sampling
+historical_sampling_days: [5, 7]
+
+# HyperParameters local methods
+lag: [7]
+
+# HyperParameters quantile regression
+l2_penalty: [10]
+solver: ["highs"]
+
+# HyperParameters random forest
+nb_trees: [10]
+max_depth: [10]
+
+#HyperParameters neural network
+neurons_layer_1: [50]
+neurons_layer_2: [40]
+epochs: [25]
+
+# ConceptDrift Detection method
+concept_drift_detection_method: "Page Hinckley"
