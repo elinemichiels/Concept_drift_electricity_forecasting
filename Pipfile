@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "==1.4.2"
+numpy = "==1.22.3"
+matplotlib = "*"
+keras = "*"
+scikit-learn = "*"
+tqdm = "*"
+tensorflow = "*"
+xgboost = "*"
+properscoring = "*"
+pyyaml = "*"
+joblib = "*"
+statsmodels = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
